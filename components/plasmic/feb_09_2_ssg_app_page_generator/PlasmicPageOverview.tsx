@@ -229,74 +229,88 @@ function PlasmicPageOverview__RenderFunc(props: {
             sty.root
           )}
         >
-          <div
-            data-plasmic-name={"freeBox"}
-            data-plasmic-override={overrides.freeBox}
-            className={classNames(projectcss.all, sty.freeBox)}
-          >
-            {(() => {
-              try {
-                return $queries.page.data[0].page_type == "advertorial";
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return true;
-                }
-                throw e;
+          {(() => {
+            try {
+              return $queries.page.isLoading == false;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return true;
               }
-            })() ? (
-              <Advertorial
-                data-plasmic-name={"advertorial2"}
-                data-plasmic-override={overrides.advertorial2}
-                articleParagraph24={generateStateValueProp($state, [
-                  "advertorial2",
-                  "articleParagraph24"
-                ])}
-                className={classNames("__wab_instance", sty.advertorial2)}
-                editable={"false"}
-                onArticleParagraph24Change={generateStateOnChangeProp($state, [
-                  "advertorial2",
-                  "articleParagraph24"
-                ])}
-                pageId={$ctx.params.slug}
-              />
-            ) : null}
-            {(() => {
-              try {
-                return $queries.page.data[0].page_type == "squeeze";
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return true;
-                }
-                throw e;
-              }
-            })() ? (
-              <SqueezeVariant2
-                data-plasmic-name={"squeezeVariant2"}
-                data-plasmic-override={overrides.squeezeVariant2}
-                className={classNames("__wab_instance", sty.squeezeVariant2)}
-                editable={"false"}
-                pageId={(() => {
-                  try {
-                    return $ctx.params.slug;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return undefined;
-                    }
-                    throw e;
+              throw e;
+            }
+          })() ? (
+            <div
+              data-plasmic-name={"freeBox"}
+              data-plasmic-override={overrides.freeBox}
+              className={classNames(projectcss.all, sty.freeBox)}
+            >
+              {(() => {
+                try {
+                  return $queries.page.data[0].page_type == "advertorial";
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
                   }
-                })()}
-              />
-            ) : null}
-          </div>
+                  throw e;
+                }
+              })() ? (
+                <Advertorial
+                  data-plasmic-name={"advertorial2"}
+                  data-plasmic-override={overrides.advertorial2}
+                  articleParagraph24={generateStateValueProp($state, [
+                    "advertorial2",
+                    "articleParagraph24"
+                  ])}
+                  className={classNames("__wab_instance", sty.advertorial2)}
+                  editable={"false"}
+                  onArticleParagraph24Change={generateStateOnChangeProp(
+                    $state,
+                    ["advertorial2", "articleParagraph24"]
+                  )}
+                  pageId={$ctx.params.slug}
+                />
+              ) : null}
+              {(() => {
+                try {
+                  return $queries.page.data[0].page_type == "squeeze";
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <SqueezeVariant2
+                  data-plasmic-name={"squeezeVariant2"}
+                  data-plasmic-override={overrides.squeezeVariant2}
+                  className={classNames("__wab_instance", sty.squeezeVariant2)}
+                  editable={"false"}
+                  pageId={(() => {
+                    try {
+                      return $ctx.params.slug;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
+                    }
+                  })()}
+                />
+              ) : null}
+            </div>
+          ) : null}
         </div>
       </div>
     </React.Fragment>
