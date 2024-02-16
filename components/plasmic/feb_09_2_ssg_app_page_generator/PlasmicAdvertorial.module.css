@@ -508,6 +508,7 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .text52 {
     font-size: 21px;
+    min-width: auto;
   }
 }
 .editText5:global(.__wab_instance) {
@@ -586,6 +587,11 @@
   margin-bottom: 30px;
   min-width: 761px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .text62 {
+    min-width: auto;
+  }
+}
 .editText6:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
@@ -662,6 +668,11 @@
   font-size: 21px;
   margin-bottom: 30px;
   min-width: 761px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text72 {
+    min-width: auto;
+  }
 }
 .editText7:global(.__wab_instance) {
   max-width: 100%;
@@ -741,6 +752,11 @@
   font-size: 21px;
   margin-bottom: 30px;
   min-width: 761px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text82 {
+    min-width: auto;
+  }
 }
 .editText8:global(.__wab_instance) {
   max-width: 100%;
@@ -1204,6 +1220,11 @@
   font-size: 21px;
   margin-bottom: 30px;
   min-width: 761px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text92 {
+    min-width: auto;
+  }
 }
 .editText9:global(.__wab_instance) {
   max-width: 100%;

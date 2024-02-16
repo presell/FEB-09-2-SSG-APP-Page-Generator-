@@ -316,6 +316,7 @@ function PlasmicSqueezeVariant2__RenderFunc(props: {
     () =>
       Object.assign(
         {
+          pageId: 189,
           editable: "true"
         },
         props.args
@@ -4289,8 +4290,9 @@ function PlasmicSqueezeVariant2__RenderFunc(props: {
                     loading={"eager"}
                     src={(() => {
                       try {
-                        return $ctx.fetchDyanamicData.records[0].fields
-                          .squeeze_c2_icon1[0].url;
+                        return (
+                          $state.editImage2 || $queries?.cms?.data[0]?.image_2
+                        );
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
@@ -4338,8 +4340,9 @@ function PlasmicSqueezeVariant2__RenderFunc(props: {
                     loading={"eager"}
                     src={(() => {
                       try {
-                        return $ctx.fetchDyanamicData.records[0].fields
-                          .squeeze_c2_icon2[0].url;
+                        return (
+                          $state.editImage3 || $queries?.cms?.data[0]?.image_3
+                        );
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
@@ -4387,8 +4390,9 @@ function PlasmicSqueezeVariant2__RenderFunc(props: {
                     loading={"eager"}
                     src={(() => {
                       try {
-                        return $ctx.fetchDyanamicData.records[0].fields
-                          .squeeze_c2_icon3[0].url;
+                        return (
+                          $state.editImage4 || $queries?.cms?.data[0]?.image_4
+                        );
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
